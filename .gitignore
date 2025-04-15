@@ -1,0 +1,5 @@
+.zed/
+default/
+.ropeproject/
+__pycache__/
+.DS_Store

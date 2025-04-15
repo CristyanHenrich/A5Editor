@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui version="4.0">
+ <class>EditorWindow</class>
+ <widget class="QMainWindow" name="EditorWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Editor A5</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QToolBar" name="toolBar">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>16</width>
+        <height>16</height>
+       </size>
+      </property>
+      <addaction name="actionInicio" />
+      <addaction name="actionNovo" />
+      <addaction name="actionAbrir" />
+      <addaction name="actionSalvar" />
+      <addaction name="separator" />
+      <addaction name="actionDesfazer" />
+      <addaction name="actionRefazer" />
+      <addaction name="separator" />
+      <addaction name="actionNegrito" />
+      <addaction name="actionItalico" />
+      <addaction name="actionSublinhado" />
+      <addaction name="separator" />
+      <addaction name="actionListaNumerada" />
+      <addaction name="actionListaMarcadores" />
+      <addaction name="separator" />
+      <addaction name="actionAlinharEsquerda" />
+      <addaction name="actionCentralizar" />
+      <addaction name="actionAlinharDireita" />
+      <addaction name="actionJustificar" />
+      <addaction name="separator" />
+      <addaction name="actionTitulo" />
+      <addaction name="actionSubtitulo" />
+      <addaction name="actionTexto" />
+      <addaction name="separator" />
+      <addaction name="actionImagem" />
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QFontComboBox" name="comboFonte">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboTamanho">
+        <property name="maximumWidth">
+         <number>70</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QWidget" name="editorContainer" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QTextEdit" name="textEdit">
+         <property name="minimumSize">
+          <size>
+           <width>559</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>559</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string>QTextEdit {
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            color: #333333;
+        }
+        </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="actionNovo">
+   <property name="icon">
+    <iconset theme="document-new" />
+   </property>
+   <property name="text">
+    <string>Novo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="icon">
+    <iconset theme="document-open" />
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSalvar">
+   <property name="icon">
+    <iconset theme="document-save" />
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionDesfazer">
+   <property name="icon">
+    <iconset theme="edit-undo" />
+   </property>
+   <property name="text">
+    <string>Desfazer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRefazer">
+   <property name="icon">
+    <iconset theme="edit-redo" />
+   </property>
+   <property name="text">
+    <string>Refazer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionNegrito">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="format-text-bold" />
+   </property>
+   <property name="text">
+    <string>Negrito</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionItalico">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="format-text-italic" />
+   </property>
+   <property name="text">
+    <string>Itálico</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionSublinhado">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="format-text-underline" />
+   </property>
+   <property name="text">
+    <string>Sublinhado</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionListaNumerada">
+   <property name="icon">
+    <iconset theme="format-list-ordered" />
+   </property>
+   <property name="text">
+    <string>Lista Numerada</string>
+   </property>
+  </action>
+  <action name="actionListaMarcadores">
+   <property name="icon">
+    <iconset theme="format-list-unordered" />
+   </property>
+   <property name="text">
+    <string>Lista com Marcadores</string>
+   </property>
+  </action>
+  <action name="actionAlinharEsquerda">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="format-justify-left" />
+   </property>
+   <property name="text">
+    <string>Alinhar à Esquerda</string>
+   </property>
+  </action>
+  <action name="actionCentralizar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="format-justify-center" />
+   </property>
+   <property name="text">
+    <string>Centralizar</string>
+   </property>
+  </action>
+  <action name="actionAlinharDireita">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="format-justify-right" />
+   </property>
+   <property name="text">
+    <string>Alinhar à Direita</string>
+   </property>
+  </action>
+  <action name="actionJustificar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="format-justify-fill" />
+   </property>
+   <property name="text">
+    <string>Justificar</string>
+   </property>
+  </action>
+  <action name="actionInicio">
+   <property name="icon">
+    <iconset theme="go-home" />
+   </property>
+   <property name="text">
+    <string>Início</string>
+   </property>
+  </action>
+  <action name="actionTitulo">
+   <property name="icon">
+    <iconset theme="format-header-1" />
+   </property>
+   <property name="text">
+    <string>Título</string>
+   </property>
+  </action>
+  <action name="actionSubtitulo">
+   <property name="icon">
+    <iconset theme="format-header-2" />
+   </property>
+   <property name="text">
+    <string>Subtítulo</string>
+   </property>
+  </action>
+  <action name="actionTexto">
+   <property name="icon">
+    <iconset theme="format-text-plain" />
+   </property>
+   <property name="text">
+    <string>Texto</string>
+   </property>
+  </action>
+  <action name="actionImagem">
+   <property name="icon">
+    <iconset theme="format-image" />
+   </property>
+   <property name="text">
+    <string>Imagem</string>
+   </property>
+  </action>
+ </widget>
+ <resources />
+ <connections />
+</ui>

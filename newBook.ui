@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui version="4.0">
+ <class>NewBookDialog</class>
+ <widget class="QDialog" name="NewBookDialog">
+  <property name="windowTitle">
+   <string>Novo Livro</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLineEdit" name="bookName">
+     <property name="placeholderText">
+      <string>Nome do livro</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutPath">
+     <item>
+      <widget class="QLineEdit" name="bookPath">
+       <property name="placeholderText">
+        <string>Pasta onde o livro será salvo</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSelectPath">
+       <property name="text">
+        <string>Selecionar Pasta</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutCover">
+     <item>
+      <widget class="QLineEdit" name="coverPath">
+       <property name="placeholderText">
+        <string>Imagem de capa (opcional)</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSelectCover">
+       <property name="text">
+        <string>Selecionar Imagem</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnSave">
+     <property name="text">
+      <string>Salvar</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

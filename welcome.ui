@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui version="4.0">
+ <class>Editor</class>
+ <widget class="QWidget" name="Editor">
+  <property name="windowTitle">
+   <string>Editor</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Albert Sans</family>
+       <pointsize>24</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Editor de Livro A5</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+        <widget class="QPushButton" name="btnNew">
+            <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>0</width>
+                    <height>150</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>16777215</width>
+                    <height>150</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Novo Livro</string>
+            </property>
+            <property name="icon">
+                <iconset theme="document-new" />
+            </property>
+            <property name="iconSize">
+                <size>
+                    <width>32</width>
+                    <height>32</height>
+                </size>
+            </property>
+            <property name="shortcut">
+                <string>Meta+N</string>
+            </property>
+        </widget>
+     </item>
+
+     <item>
+        <widget class="QPushButton" name="btnOpen">
+            <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>0</width>
+                    <height>150</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>16777215</width>
+                    <height>150</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Abrir Livro</string>
+            </property>
+            <property name="icon">
+                <iconset theme="document-open" />
+            </property>
+            <property name="iconSize">
+                <size>
+                    <width>32</width>
+                    <height>32</height>
+                </size>
+            </property>
+            <property name="shortcut">
+                <string>Meta+O</string>
+            </property>
+        </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <family>Albert Sans</family>
+       <pointsize>24</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Projetos Recentes</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QListView" name="listaLivros">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding" />
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources />
+ <connections />
+</ui>
